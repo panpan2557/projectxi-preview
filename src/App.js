@@ -79,17 +79,22 @@ class App extends Component {
     this.setState({width: window.innerWidth});
   }
 
+  // Keep the router away first ...
+  // <Router>
+  //   <div>
+  //     <Route path="/" exact component={Index}></Route>
+  //     <Route path="/projectxi/"
+  //       render={() => (
+  //
+  //       )}/>
+  //   </div>
+  // </Router>
+
   render() {
     return (
-      <Router>
-        <div>
-          <Route path="/" exact component={Index}></Route>
-          <Route path="/projectxi/"
-            render={() => (
-                <ProjectXI width={this.state.width} />
-            )}/>
-        </div>
-      </Router>
+      <div>
+        <ProjectXI width={this.state.width} />
+      </div>
     );
   }
 }
